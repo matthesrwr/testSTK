@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		35A018D215F785BA00046F4B /* uart.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart.c; sourceTree = "<group>"; };
+		35A018D315F8B38B00046F4B /* commandInterface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commandInterface.c; sourceTree = "<group>"; };
 		35A4876415A08B7D00261D14 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		35A4876515A08B7D00261D14 /* Makefile */ = {isa = PBXFileReference; path = Makefile; sourceTree = "<group>"; };
+		35A4876515A08B7D00261D14 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -24,6 +26,8 @@
 			children = (
 				35A4876415A08B7D00261D14 /* main.c */,
 				35A4876515A08B7D00261D14 /* Makefile */,
+				35A018D215F785BA00046F4B /* uart.c */,
+				35A018D315F8B38B00046F4B /* commandInterface.c */,
 			);
 			path = testSTK;
 			sourceTree = "<group>";
@@ -37,7 +41,8 @@
 			buildConfigurationList = 35A4876815A08B7D00261D14 /* Build configuration list for PBXLegacyTarget "build" */;
 			buildPhases = (
 			);
-			buildToolPath = make;
+			buildToolPath = "/usr/local/CrossPack-AVR/bin/make";
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = build;
@@ -50,7 +55,8 @@
 			buildConfigurationList = 35A4876B15A08B7D00261D14 /* Build configuration list for PBXLegacyTarget "fuse" */;
 			buildPhases = (
 			);
-			buildToolPath = /usr/bin/make;
+			buildToolPath = "/usr/local/CrossPack-AVR/bin/make";
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = fuse;
@@ -63,7 +69,8 @@
 			buildConfigurationList = 35A4876E15A08B7D00261D14 /* Build configuration list for PBXLegacyTarget "flash" */;
 			buildPhases = (
 			);
-			buildToolPath = /usr/bin/make;
+			buildToolPath = "/usr/local/CrossPack-AVR/bin/make";
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = flash;
@@ -76,7 +83,7 @@
 		35A4875B15A08B7C00261D14 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 35A4875E15A08B7C00261D14 /* Build configuration list for PBXProject "testSTK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -90,8 +97,8 @@
 			projectRoot = "";
 			targets = (
 				35A4876015A08B7D00261D14 /* build */,
-				35A4876115A08B7D00261D14 /* fuse */,
 				35A4876215A08B7D00261D14 /* flash */,
+				35A4876115A08B7D00261D14 /* fuse */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +144,7 @@
 		35A4876915A08B7D00261D14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -144,6 +152,7 @@
 		35A4876A15A08B7D00261D14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -151,24 +160,28 @@
 		35A4876C15A08B7D00261D14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		35A4876D15A08B7D00261D14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		35A4876F15A08B7D00261D14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		35A4877015A08B7D00261D14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
@@ -191,6 +204,7 @@
 				35A4876A15A08B7D00261D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35A4876B15A08B7D00261D14 /* Build configuration list for PBXLegacyTarget "fuse" */ = {
 			isa = XCConfigurationList;
@@ -199,6 +213,7 @@
 				35A4876D15A08B7D00261D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35A4876E15A08B7D00261D14 /* Build configuration list for PBXLegacyTarget "flash" */ = {
 			isa = XCConfigurationList;
@@ -207,6 +222,7 @@
 				35A4877015A08B7D00261D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
