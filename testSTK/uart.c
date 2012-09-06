@@ -19,6 +19,9 @@
 #define F_CPU 3686400
 #endif
 
+
+
+
 #define UART_BAUD_RATE 115200
 #define UART_TX_BUFFER_SIZE 128
 #define UART_RX_BUFFER_SIZE 128
