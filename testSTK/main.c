@@ -13,14 +13,16 @@
 
 #include <avr/io.h>
 #include <stdio.h>
-#include "uart.c"
-#include "commandInterface.c"
+#include "uart.h"
+#include "commandinterface.h"
 
 #ifndef F_CPU
 #define F_CPU 3686400
 #endif
 
 void returnInt(char* value,void *returnValue);
+
+static FILE mystd = FDEV_SETUP_STREAM( uart_putchar, NULL, _FDEV_SETUP_WRITE );
 
 int main(void)
 {
@@ -48,7 +50,9 @@ int main(void)
 	commandInterfaceInit();
 	commandInterfaceAddCommand("an",3,&returnInt);
 	commandInterfaceAddCommand("aus",2,&returnInt);
+	commandInterfaceAddCommand("h",1,NULL);
 	printf("Hallo Welt\nHier ist ihr Controller\n");
+	
 	// Main loop
 	while(1)
 	{
@@ -62,8 +66,6 @@ int main(void)
 				break;
 			case 3:
 				PORTB = 0x00;
-				uint16_t *tmp;
-				tmp = commandInterfaceRetVal;
 				printf("licht ist an:%u\n",*commandInterfaceRetValuint16_t);
 				break;				
 			default:

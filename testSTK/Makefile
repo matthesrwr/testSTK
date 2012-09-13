@@ -15,9 +15,9 @@
 # FUSES ........ Parameters for avrdude to flash the fuses appropriately.
 
 DEVICE     = atmega8
-CLOCK      = 8000000
+CLOCK      = 3686400
 PROGRAMMER = -c stk500v2 -P /dev/tty.usbserial
-OBJECTS    = main.o
+OBJECTS    = main.o uart.o commandinterface.o
 FUSES      = -U hfuse:w:0xc9:m -U lfuse:w:0xc0:m
 
 # AVR fuse calculator
@@ -26,7 +26,7 @@ FUSES      = -U hfuse:w:0xc9:m -U lfuse:w:0xc0:m
 # Tune the lines below only if you know what you are doing:
 
 AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE)
-COMPILE = avr-gcc -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
+COMPILE = avr-gcc -Wall -O2 -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
 
 # symbolic targets:
 all:	clean main.hex

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		350D3EFC160205090086B6A3 /* uart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uart.h; sourceTree = "<group>"; };
+		350D3EFE160206960086B6A3 /* commandinterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commandinterface.h; sourceTree = "<group>"; };
 		35A018D215F785BA00046F4B /* uart.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart.c; sourceTree = "<group>"; };
-		35A018D315F8B38B00046F4B /* commandInterface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commandInterface.c; sourceTree = "<group>"; };
+		35A018D315F8B38B00046F4B /* commandinterface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commandinterface.c; sourceTree = "<group>"; };
 		35A4876415A08B7D00261D14 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		35A4876515A08B7D00261D14 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -27,7 +29,9 @@
 				35A4876415A08B7D00261D14 /* main.c */,
 				35A4876515A08B7D00261D14 /* Makefile */,
 				35A018D215F785BA00046F4B /* uart.c */,
-				35A018D315F8B38B00046F4B /* commandInterface.c */,
+				35A018D315F8B38B00046F4B /* commandinterface.c */,
+				350D3EFE160206960086B6A3 /* commandinterface.h */,
+				350D3EFC160205090086B6A3 /* uart.h */,
 			);
 			path = testSTK;
 			sourceTree = "<group>";
